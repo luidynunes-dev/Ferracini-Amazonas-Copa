@@ -135,28 +135,6 @@ export default function App() {
                     </div>
                   </button>
                 ))}
-
-                {/* VISUAL PRESENTATION PLACEHOLDERS FOR TEST (Representing future inventory cleanly) */}
-                <div className="relative w-full aspect-square bg-[#222] rounded-2xl overflow-hidden flex flex-col items-center justify-center border border-neutral-800 p-4">
-                  <div className="text-neutral-600 text-xs font-mono font-bold tracking-widest text-center uppercase">
-                    EM BREVE
-                  </div>
-                  <span className="text-[10px] text-neutral-500 mt-1">Novo Modelo</span>
-                </div>
-
-                <div className="relative w-full aspect-square bg-[#222] rounded-2xl overflow-hidden flex flex-col items-center justify-center border border-neutral-800 p-4">
-                  <div className="text-neutral-600 text-xs font-mono font-bold tracking-widest text-center uppercase">
-                    EM BREVE
-                  </div>
-                  <span className="text-[10px] text-neutral-500 mt-1">Novo Modelo</span>
-                </div>
-
-                <div className="relative w-full aspect-square bg-[#222] rounded-2xl overflow-hidden flex flex-col items-center justify-center border border-neutral-800 p-4">
-                  <div className="text-neutral-600 text-xs font-mono font-bold tracking-widest text-center uppercase">
-                    EM BREVE
-                  </div>
-                  <span className="text-[10px] text-neutral-500 mt-1">Novo Modelo</span>
-                </div>
               </div>
             </div>
           </div>
@@ -209,10 +187,6 @@ export default function App() {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar
             </button>
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-neutral-900 flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-amber-600 animate-pulse" />
-              Curadoria Ferracini de Testes
-            </h2>
           </div>
 
           {/* FILTER BY CATEGORIES TO MATCH STRETCH CAPABILITIES */}
