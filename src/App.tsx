@@ -36,9 +36,9 @@ export default function App() {
       />
 
       {/* HEADER */}
-      <header className="py-6 px-4 max-w-5xl mx-auto grid grid-cols-3 items-center">
-        <div className="justify-self-start">
-          {view === 'catalog' ? (
+      <header className="relative py-6 px-4 max-w-5xl mx-auto flex items-center justify-center min-h-[76px]">
+        {view === 'catalog' && (
+          <div className="absolute left-4">
             <button 
               onClick={() => navigateTo('home')}
               className="flex items-center gap-1.5 text-xs text-neutral-600 hover:text-neutral-950 font-bold uppercase tracking-wider transition-colors bg-white/60 hover:bg-white px-3 py-1.5 rounded-full border border-neutral-300/60 shadow-xs"
@@ -46,29 +46,16 @@ export default function App() {
               <ArrowLeft className="w-3.5 h-3.5" />
               Início
             </button>
-          ) : (
-            <div className="hidden sm:block"></div>
-          )}
-        </div>
+          </div>
+        )}
         
         {/* CENTERED BRAND LOGO */}
-        <div className="justify-self-center col-span-2 sm:col-span-1">
+        <div className="flex justify-center">
           <button onClick={() => navigateTo('home')} className="flex items-center gap-1 group">
             <span className="font-serif tracking-[0.2em] text-2xl font-black uppercase text-neutral-950 group-hover:text-amber-900 transition-colors">
               FERRACINI
             </span>
             <span className="w-3.5 h-1.5 bg-[#00A344] transform -skew-x-[25deg] mt-1.5 transition-transform group-hover:translate-x-1"></span>
-          </button>
-        </div>
-
-        {/* RIGHT ACTION STATUS */}
-        <div className="justify-self-end">
-          <button 
-            onClick={() => navigateTo('catalog')}
-            className="flex items-center gap-1.5 bg-white px-4 py-2 rounded-full text-xs font-bold border border-neutral-200/80 shadow-[0_2px_6px_rgba(0,0,0,0.03)] hover:border-neutral-350 hover:bg-neutral-50 transition-all text-neutral-800"
-          >
-            <span className="text-emerald-500 text-sm leading-none">💚</span>
-            Coleção 2026
           </button>
         </div>
       </header>
@@ -112,7 +99,7 @@ export default function App() {
 
               {/* CARD SHOWCASE CAROUSEL */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
-                {products.map((product) => (
+                {products.slice(0, 4).map((product) => (
                   <button 
                     key={product.id}
                     onClick={() => {
